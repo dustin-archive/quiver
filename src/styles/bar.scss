@@ -1,0 +1,14 @@
+
+.bar-inner {
+  width: 1200px;
+  margin: auto;
+}
+
+.bar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  color: $white;
+  background: $retro;
+}

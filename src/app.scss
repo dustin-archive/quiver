@@ -1,0 +1,126 @@
+
+@charset 'UTF-8';
+
+//
+// # Fonts
+// =============================================================================
+
+@font-face {
+  font-family: 'Material Icons';
+  src:
+  local('MaterialIcons'),
+  local('MaterialIcons-Regular'),
+  url('fonts/MaterialIcons-Regular.woff2') format('woff2'),
+  url('fonts/MaterialIcons-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:
+  local('Roboto'),
+  local('Roboto-Regular'),
+  url('fonts/roboto-v18-latin-regular.woff2') format('woff2'),
+  url('fonts/roboto-v18-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src:
+  local('Roboto Mono'),
+  local('Roboto-Mono-Regular'),
+  url('fonts/roboto-mono-v5-latin-regular.woff2') format('woff2'),
+  url('fonts/roboto-mono-v5-latin-regular.woff') format('woff');
+}
+
+//
+// # Variables
+// =============================================================================
+
+$white: #fff;
+$black: #000;
+
+$red: rgb(223, 31, 47);
+$yellow: rgb(223, 159, 31);
+$green: rgb(127, 191, 63);
+$blue: rgb(31, 159, 223);
+
+$retro: rgb(127, 191, 191);
+
+$dark-1: rgb(31, 33, 35);
+$dark-2: rgb(23, 25, 27);
+$dark-3: rgb(15, 17, 19);
+
+$background-light: rgb(243, 245, 247);
+
+$shadow-top-1: 0 24px 48px -12px rgba($dark-3, 0.125);
+$shadow-top-2: 0 12px 24px -6px rgba($dark-3, 0.125);
+
+//
+// # Reset
+// =============================================================================
+// 1. HACK: Webkit iOS: enable momentum scrolling on overflow elements
+// 2. HACK: Safari: `position: fixed` changes font-smoothing
+
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  -webkit-overflow-scrolling: touch; // 1
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+svg, table {
+  width: 100%;
+}
+
+body {
+  font: 400 1em/1 '-apple-system', BlinkMacSystemFont, sans-serif;
+  background: $background-light;
+  box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased; // 2
+}
+
+button {
+  user-select: none;
+}
+
+//
+// # Helpers
+// =============================================================================
+
+._material-icons {
+  font-family: 'Material Icons';
+  font-feature-settings: 'liga'; // IE
+  font-size: 24px;
+  text-rendering: optimizeLegibility; // Safari and Chrome
+  text-transform: none;
+  -webkit-font-smoothing: antialiased; // WebKit
+  -moz-osx-font-smoothing: grayscale; // Firefox
+}
+
+//
+// # Imports
+// =============================================================================
+
+@import 'styles/bar';
+
+//
+// # Styles
+// =============================================================================
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+img {
+  margin: auto;
+}
