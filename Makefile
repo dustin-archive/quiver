@@ -11,7 +11,7 @@ all: build
 	postcss dist/app.css -o dist/app.css -u autoprefixer -m
 	cleancss dist/app.css -o dist/app.css --source-map --source-map-inline-sources
 
-demo: build
+demo: build all
 	dev-server dist --watch 'src/**/*' 'make'
 
 start: build
@@ -32,7 +32,9 @@ css:
 
 setup:
 	cp .env-example .env
-	npm i hyperapp
+	npm i \
+		@whaaaley/query-string \
+		hyperapp
 	npm i -D \
 		@babel/cli \
 		@babel/core \

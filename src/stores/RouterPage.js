@@ -11,4 +11,4 @@ const RouterPage = {
   }
 }
 
-export { RouterPage }
+export default RouterPage

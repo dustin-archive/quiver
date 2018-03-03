@@ -2,15 +2,15 @@
 import { h } from 'hyperapp'
 
 import Home from './Home'
+import NotFound from './NotFound'
 
-import { shallowEqualArrays } from '../helpers/shallowEqualArrays'
-
-const NotFound = () => h('div', null, '404')
+import shallowEqualArrays from '../helpers/shallowEqualArrays'
 
 const RouterView = args => {
-  // pair paths with views
+  // map paths to views
   const routes = {
-    '': Home
+    '': Home,
+    '/test': args => h('div', null, 'test')
   }
 
   // destructure arguments
@@ -20,18 +20,11 @@ const RouterView = args => {
   const oldPaths = state.RouterPage.paths
   const paths = Object.keys(routes)
   if (!oldPaths || !shallowEqualArrays(oldPaths, paths)) {
-    // NOTE: update state without re-rendering
     actions.RouterPage.init({ paths })
   }
 
-  // destructure current route props
-  const { mounted, view = NotFound } = routes[state.Router.path || '']
-
-  // call the route's mounted callback
-  mounted && mounted()
-
-  // render the route's view
-  return view
+  // render route
+  return (routes[state.Router.path] || NotFound)(args)
 }
 
-export { RouterView }
+export default RouterView

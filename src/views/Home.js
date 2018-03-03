@@ -1,10 +1,7 @@
 
 import { h } from 'hyperapp'
 
-const mounted = () => {
-  console.log('this is the home page')
-}
+const Home = args =>
+  h('div', null, 'home')
 
-const view = h('div', null, 'home')
-
-export default { mounted, view }
+export default Home

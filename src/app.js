@@ -3,10 +3,12 @@
 
 import { h, app } from 'hyperapp'
 
-import { Router } from './stores/Router'
-import { RouterPage } from './stores/RouterPage'
+import RouterInit from './main/RouterInit'
 
-import { RouterView } from './views/RouterView'
+import Router from './stores/Router'
+import RouterPage from './stores/RouterPage'
+
+import RouterView from './views/RouterView'
 
 const state = {
   Router: {},
@@ -15,7 +17,9 @@ const state = {
 
 const actions = {
   Router,
-  RouterPage
+  RouterPage,
+  getState: d => state => state,
+  update: data => data
 }
 
 const view = (...args) =>
@@ -27,4 +31,11 @@ const view = (...args) =>
     h('img', { src: 'images/hyperapp.png' })
   ])
 
-app(state, actions, view, document.body)
+// create app instance
+const main = app(state, actions, view, document.getElementById('hyperapp'))
+
+RouterInit(main)
+
+window.addEventListener('hashchange', e => {
+  RouterInit(main)
+})

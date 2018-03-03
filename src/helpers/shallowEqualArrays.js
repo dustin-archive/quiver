@@ -15,4 +15,4 @@ const shallowEqualArrays = (a, b) => {
   return true
 }
 
-export { shallowEqualArrays }
+export default shallowEqualArrays
