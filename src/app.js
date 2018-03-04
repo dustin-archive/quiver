@@ -3,6 +3,8 @@
 
 import { h, app } from 'hyperapp'
 
+import Bar from './components/Bar'
+
 import RouterInit from './main/RouterInit'
 
 import Router from './stores/Router'
@@ -22,19 +24,12 @@ const actions = {
   update: data => data
 }
 
-const Bar = args =>
-  h('div', { class: 'bar' }, [
-    h('div', { class: 'bar-inner' }, [
-      h('img', { src: 'images/hyperapp.png' })
-    ])
-  ])
-
 const view = (...args) =>
   h('div', { class: 'app' }, [
     h('div', { class: 'app-content' }, [
       h('div', { class: 'app-main' }, [
-        h('div', { class: 'app-main-inner -left' }),
-        h('div', { class: 'app-main-inner -right' }, [
+        h('div', { class: 'app-main-inner-left' }),
+        h('div', { class: 'app-main-inner-right' }, [
           RouterView(args)
         ])
       ]),
