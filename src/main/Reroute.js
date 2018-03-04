@@ -1,8 +1,6 @@
 
 const Reroute = ([ state, main ]) => {
-  const { path } = state.Router
-
-  console.log(path, 'Woah there! Hang tight while we process this!')
+  console.log(`Woah there! Hang tight while we process this! #${state.Router.path}`)
 
   main.Reroute.update({
     loading: true
