@@ -1,21 +1,24 @@
 
 'use strict'
 
-import { app as hyperapp } from 'hyperapp'
+import { app } from 'hyperapp'
 
 import RouterInit from './main/RouterInit'
 
+import Listings from './stores/Listings'
 import Router from './stores/Router'
 import RouterPage from './stores/RouterPage'
 
 import App from './views/App'
 
 const state = {
+  Listings: {},
   Router: {},
   RouterPage: {}
 }
 
 const actions = {
+  Listings,
   Router,
   RouterPage,
   getState: d => state => state,
@@ -25,7 +28,7 @@ const actions = {
 const view = (...args) => App(args)
 
 // create app instance
-const main = hyperapp(state, actions, view, document.getElementById('hyperapp'))
+const main = app(state, actions, view, document.getElementById('app'))
 
 RouterInit(main)
 

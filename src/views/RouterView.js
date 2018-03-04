@@ -1,7 +1,6 @@
 
-import { h } from 'hyperapp'
-
 import Home from './Home'
+import Listings from './Listings'
 import NotFound from './NotFound'
 
 import shallowEqualArrays from '../helpers/shallowEqualArrays'
@@ -10,11 +9,11 @@ const RouterView = args => {
   // map paths to views
   const routes = {
     '': Home,
-    '/test': args => h('div', null, 'test')
+    '/listings': Listings
   }
 
   // destructure arguments
-  const [state, actions] = args
+  const [ state, actions ] = args
 
   // update RouterPage's paths if needed
   const oldPaths = state.RouterPage.paths
