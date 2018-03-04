@@ -1,29 +1,7 @@
 
-const Home = m => {
-  console.log('home')
-}
-
-const Listings = main => {
-  setTimeout(() => {
-    main.Listings.update({
-      listings: [
-        'one',
-        'two',
-        'three',
-        'four',
-        'five',
-        'six',
-        'seven',
-        'eight',
-        'nine'
-      ]
-    })
-  }, 3000)
-}
-
-const NotFound = m => {
-  console.log('No callbacks')
-}
+import Home from './Home'
+import Listings from './Listings'
+import NotFound from './NotFound'
 
 const RouterInit = main => {
   // init Router
