@@ -83,7 +83,6 @@ svg, table {
 
 body {
   font: 400 1em/1 '-apple-system', BlinkMacSystemFont, sans-serif;
-  background: $background-light;
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased; // 2
 }
@@ -116,10 +115,55 @@ button {
 // # Styles
 // =============================================================================
 
+.app-main-inner {
+  &.-left {
+    flex: 1;
+  }
+
+  &.-right {
+    flex: 3;
+    min-width: 1200px;
+    padding: 56px 0 0;
+  }
+}
+
+.app-main {
+  flex: 4;
+  display: flex;
+}
+
+.app-side {
+  flex: 1;
+  display: flex;
+  // min-width: 320px;
+  background: $background-light;
+  z-index: 1;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+}
+
 .app {
   display: flex;
   height: 100vh;
 }
+
+// mobile
+@media (max-width: 1200px + 320px) {
+  .app-main-inner {
+    &.-left {
+      flex: 0;
+    }
+
+    &.-right {
+      min-width: 0;
+    }
+  }
+}
+
+//
 
 img {
   margin: auto;
