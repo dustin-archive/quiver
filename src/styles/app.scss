@@ -1,0 +1,44 @@
+
+.app-main-inner-left {
+  flex: 1;
+}
+
+.app-main-inner-right {
+  flex: 3;
+  min-width: 1200px;
+  padding: 56px 0 0;
+}
+
+.app-main {
+  flex: 4;
+  display: flex;
+}
+
+.app-side {
+  flex: 1;
+  display: flex;
+  min-width: 320px;
+  background: $background-light;
+  z-index: 1;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+// mobile
+@media (max-width: 1200px + 320px) {
+  .app-main-inner-left {
+    flex: 0;
+  }
+
+  .app-main-inner-right {
+    min-width: 0;
+  }
+}
