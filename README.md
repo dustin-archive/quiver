@@ -1,9 +1,9 @@
 
-# <img src=favicon.png height=24> @whaaaley/launchpad
+# <img src=favicon.png height=24> @whaaaley/newapp
 
 > Boilerplate for building web applications.
 
-[**View Demo**](https://launchpad-demo.netlify.com/)
+[**View Demo**](https://newapp.netlify.com/)
 
 ![screenshot](screenshot.png)
 
@@ -39,4 +39,4 @@ make
 
 This project uses Netlify to deploy when commits are pushed to master.
 
-[View the Netlify dashboard for this project.](https://app.netlify.com/sites/launchpad-demo)
+[View the Netlify dashboard for this project.](https://app.netlify.com/sites/newapp)
