@@ -2,6 +2,11 @@
 .bar-inner {
   width: 1200px;
   margin: auto;
+
+  img {
+    display: block;
+    height: 56px - 12px;
+  }
 }
 
 .bar {

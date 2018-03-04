@@ -24,7 +24,9 @@ const actions = {
 
 const Bar = args =>
   h('div', { class: 'bar' }, [
-    h('div', { class: 'bar-inner' }, 'bar')
+    h('div', { class: 'bar-inner' }, [
+      h('img', { src: 'images/hyperapp.png' })
+    ])
   ])
 
 const view = (...args) =>
