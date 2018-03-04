@@ -2,6 +2,7 @@
 import Home from './Home'
 import Listings from './Listings'
 import NotFound from './NotFound'
+import Reroute from './Reroute'
 
 import shallowEqualArrays from '../helpers/shallowEqualArrays'
 
@@ -9,7 +10,8 @@ const RouterView = args => {
   // map paths to views
   const routes = {
     '': Home,
-    '/listings': Listings
+    '/listings': Listings,
+    '/reroute': Reroute
   }
 
   // destructure arguments

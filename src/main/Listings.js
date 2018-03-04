@@ -1,5 +1,5 @@
 
-const Listings = main => {
+const Listings = ([, main]) => {
   setTimeout(() => {
     main.Listings.update({
       listings: [

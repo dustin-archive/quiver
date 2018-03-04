@@ -2,6 +2,7 @@
 import Home from './Home'
 import Listings from './Listings'
 import NotFound from './NotFound'
+import Reroute from './Reroute'
 
 const RouterInit = main => {
   // init Router
@@ -13,11 +14,12 @@ const RouterInit = main => {
   // map paths to callbacks
   const routes = {
     '': Home,
-    '/listings': Listings
+    '/listings': Listings,
+    '/reroute': Reroute
   }
 
   // call callback
-  ;(routes[state.Router.path] || NotFound)(main)
+  ;(routes[state.Router.path] || NotFound)([state, main])
 }
 
 export default RouterInit

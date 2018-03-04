@@ -1,5 +1,5 @@
 
-const Home = m => {
+const Home = a => {
   console.log('home')
 }
 

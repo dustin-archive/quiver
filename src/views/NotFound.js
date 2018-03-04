@@ -1,7 +1,7 @@
 
 import { h } from 'hyperapp'
 
-const NotFound = args =>
-  h('div', null, '404')
+const NotFound = ([ state ]) =>
+  h('div', null, `No views for this route. #${state.Router.path}`)
 
 export default NotFound
