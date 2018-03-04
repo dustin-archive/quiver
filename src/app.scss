@@ -115,16 +115,14 @@ button {
 // # Styles
 // =============================================================================
 
-.app-main-inner {
-  &.-left {
-    flex: 1;
-  }
+.app-main-inner-left {
+  flex: 1;
+}
 
-  &.-right {
-    flex: 3;
-    min-width: 1200px;
-    padding: 56px 0 0;
-  }
+.app-main-inner-right {
+  flex: 3;
+  min-width: 1200px;
+  padding: 56px 0 0;
 }
 
 .app-main {
@@ -152,13 +150,11 @@ button {
 
 // mobile
 @media (max-width: 1200px + 320px) {
-  .app-main-inner {
-    &.-left {
-      flex: 0;
-    }
+  .app-main-inner-left {
+    flex: 0;
+  }
 
-    &.-right {
-      min-width: 0;
-    }
+  .app-main-inner-right {
+    min-width: 0;
   }
 }
