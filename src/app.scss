@@ -135,7 +135,7 @@ button {
 .app-side {
   flex: 1;
   display: flex;
-  // min-width: 320px;
+  min-width: 320px;
   background: $background-light;
   z-index: 1;
 }
