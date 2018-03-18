@@ -1,0 +1,15 @@
+
+.card {
+  border-radius: 8px;
+  background-blend-mode: multiply;
+  background-color: $background-light;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+
+  &::before {
+    display: block;
+    padding: 0 0 100%;
+    content: '';
+  }
+}

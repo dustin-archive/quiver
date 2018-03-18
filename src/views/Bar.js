@@ -3,9 +3,7 @@ import { h } from 'hyperapp'
 
 const Bar = args =>
   h('div', { class: 'bar' }, [
-    h('div', { class: 'bar-inner' }, [
-      h('img', { src: 'images/logo.png' })
-    ])
+    h('a', { href: '/' })
   ])
 
 export default Bar

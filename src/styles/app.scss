@@ -1,9 +1,5 @@
 
-.app-main-inner-left {
-  flex: 1;
-}
-
-.app-main-inner-right {
+.app-inner {
   flex: 3;
   min-width: 1200px;
   padding: 56px 0 0;
@@ -12,6 +8,11 @@
 .app-main {
   flex: 4;
   display: flex;
+
+  &::before {
+    flex: 1;
+    content: '';
+  }
 }
 
 .app-side {
@@ -30,15 +31,30 @@
 .app {
   display: flex;
   height: 100vh;
+
+  &::after {
+    position: fixed;
+    width: 100%;
+    height: 56px;
+    background: $retro;
+    content: '';
+  }
 }
 
 // mobile
 @media (max-width: 1200px + 320px) {
-  .app-main-inner-left {
-    flex: 0;
+  .app-main {
+    &::before {
+      display: none;
+    }
   }
 
-  .app-main-inner-right {
+  .app-inner {
     min-width: 0;
+  }
+
+  .app-side {
+    position: absolute;
+    transform: translate(100%);
   }
 }

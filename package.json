@@ -1,20 +1,21 @@
 {
-  "name": "launchpad",
+  "name": "Quiver",
   "version": "0.0.0",
-  "description": "",
+  "description": "Product lists, ratings, and reviews.",
   "author": "",
   "license": "MIT",
   "main": "src/app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/whaaaley/launchpad.git"
+    "url": "git+https://github.com/whaaaley/quiver.git"
   },
   "bugs": {
-    "url": "https://github.com/whaaaley/launchpad/issues"
+    "url": "https://github.com/whaaaley/quiver/issues"
   },
-  "homepage": "https://github.com/whaaaley/launchpad#readme",
+  "homepage": "https://github.com/whaaaley/quiver#readme",
   "dependencies": {
     "@whaaaley/query-string": "^0.2.0",
+    "classcat": "^3.0.2",
     "hyperapp": "^1.1.2"
   },
   "devDependencies": {

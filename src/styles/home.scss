@@ -1,0 +1,100 @@
+
+.home-agree {
+  margin: 70px 0 0;
+  color: $retro-light;
+  font-size: 14px;
+  line-height: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  animation: 0.5s 2s forwards home-fade;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.home-button {
+  width: 256px;
+  margin: 0 auto;
+  padding: 14px 0;
+  border: 2px transparent solid;
+  border-radius: 28px;
+  color: $white;
+  font-size: 24px;
+  font-weight: bold;
+  background: $retro;
+  cursor: pointer;
+  overflow: hidden;
+  animation: 1.5s home-slide;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 96px;
+    height: 100%;
+    transform: translate(-96px) skewX(135deg);
+    background: $white;
+    content: '';
+    opacity: 0;
+    animation: 0.5s 3s home-shine;
+  }
+
+  &:hover {
+    border: 2px $retro solid;
+    color: $retro;
+    background: none;
+  }
+}
+
+.home-quiver {
+  width: 36px * 6;
+  height: 12px * 6;
+  margin: 36px auto;
+  background: url('images/quiver.svg');
+  background-size: cover;
+  animation: home-slide 1.25s;
+}
+
+.home-logo {
+  width: 256px;
+  height: 256px;
+  margin: 24px auto 0;
+  border-radius: 50%;
+  background: url('images/logo.svg');
+  background-color: $retro;
+  animation: home-slide 1s;
+}
+
+.home {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  white-space: pre;
+  user-select: none;
+  -webkit-font-smoothing: antialiased; // HACK: Chrome
+  animation: home-slide 2s;
+}
+
+@keyframes home-fade {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes home-shine {
+  50% {
+    opacity: 0.375;
+  }
+
+  100% {
+    transform: translate(256px) skewX(135deg);
+  }
+}
+
+@keyframes home-slide {
+  0% {
+    transform: translateY(96px);
+    opacity: 0;
+  }
+}

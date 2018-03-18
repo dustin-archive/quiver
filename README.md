@@ -1,11 +1,11 @@
 
-# <img src=favicon.png height=24> @whaaaley/newapp
+# <img src=favicon.png height=24> @whaaaley/quiver
 
-> Boilerplate for building web applications.
+> Product lists, ratings, and reviews.
 
-[**View Demo**](https://newapp.netlify.com/)
+[**View Demo**](https://quiver.netlify.com/)
 
-![screenshot](screenshot.png)
+![favicon](favicon.png)
 
 ## Install and Setup
 
@@ -39,4 +39,4 @@ make
 
 This project uses Netlify to deploy when commits are pushed to master.
 
-[View the Netlify dashboard for this project.](https://app.netlify.com/sites/newapp)
+[View the Netlify dashboard for this project.](https://app.netlify.com/sites/quiver)
