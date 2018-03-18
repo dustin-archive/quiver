@@ -1,5 +1,5 @@
 
-# <img src=favicon.png height=24> @whaaaley/quiver
+# <img src=favicon.png height=24> Quiver
 
 > Product lists, ratings, and reviews.
 
