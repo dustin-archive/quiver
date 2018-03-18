@@ -34,6 +34,7 @@ setup:
 	cp .env-example .env
 	npm i \
 		@whaaaley/query-string \
+		classcat \
 		hyperapp
 	npm i -D \
 		@babel/cli \

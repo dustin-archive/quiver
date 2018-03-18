@@ -53,10 +53,7 @@ $dark-1: rgb(31, 33, 35);
 $dark-2: rgb(23, 25, 27);
 $dark-3: rgb(15, 17, 19);
 
-$background-light: rgb(243, 245, 247);
-
-$shadow-top-1: 0 24px 48px -12px rgba($dark-3, 0.125);
-$shadow-top-2: 0 12px 24px -6px rgba($dark-3, 0.125);
+$light: rgb(243, 245, 247);
 
 //
 // # Reset
@@ -117,3 +114,4 @@ button {
 @import 'styles/card';
 @import 'styles/home';
 @import 'styles/listings';
+@import 'styles/spinner';

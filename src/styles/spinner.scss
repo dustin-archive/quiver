@@ -1,0 +1,20 @@
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  padding: 4px;
+  border-radius: 50%;
+  background: $white;
+
+  img {
+    width: 36px;
+    height: 36px;
+    animation: 1s linear infinite spinner-rotate;
+  }
+}
+
+@keyframes spinner-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

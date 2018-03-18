@@ -15,10 +15,7 @@ const ListingsGrid = ([ state, args ]) => {
         {
           '-wide': wide
         }
-      ]),
-      style: {
-        'animation-delay': (i * 0.25) + 's'
-      }
+      ])
     }, [
       Card({ i, image, name })
     ])
