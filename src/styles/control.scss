@@ -4,10 +4,11 @@
 // }
 
 .control-button {
-  padding: 10px 12px;
+  $control-white: rgba($white, 0.125);
+  padding: 12px;
 
-  ._material-icons {
-    font-size: 36px;
+  &:hover {
+    background: $control-white;
   }
 }
 
@@ -15,4 +16,6 @@
   display: flex;
   margin: 0 0 0 auto;
   color: $white;
+  cursor: pointer;
+  user-select: none;
 }
