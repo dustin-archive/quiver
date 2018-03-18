@@ -1,5 +1,5 @@
 
-<img src=images/quiver.svg height=96>
+# <img src=images/quiver.svg height=96>
 
 > Product lists, ratings, and reviews.
 
