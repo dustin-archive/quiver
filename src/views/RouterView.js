@@ -1,17 +1,17 @@
 
-import Home from './Home'
 import Listings from './Listings'
 import NotFound from './NotFound'
 import Reroute from './Reroute'
+import Welcome from './Welcome'
 
 import shallowEqualArrays from '../helpers/shallowEqualArrays'
 
 const RouterView = args => {
   // map paths to views
   const routes = {
-    '': Home,
-    '/listings': Listings,
-    '/reroute': Reroute
+    '': Listings,
+    '/reroute': Reroute,
+    '/welcome': Welcome
   }
 
   // destructure arguments

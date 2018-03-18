@@ -53,7 +53,9 @@ $dark-1: rgb(31, 33, 35);
 $dark-2: rgb(23, 25, 27);
 $dark-3: rgb(15, 17, 19);
 
-$light: rgb(243, 245, 247);
+$light-1: rgb(243, 245, 247);
+$light-2: rgb(235, 237, 239);
+$light-3: rgb(227, 229, 231);
 
 //
 // # Reset
@@ -112,6 +114,7 @@ button {
 @import 'styles/app';
 @import 'styles/bar';
 @import 'styles/card';
-@import 'styles/home';
+@import 'styles/control';
 @import 'styles/listings';
 @import 'styles/spinner';
+@import 'styles/welcome';

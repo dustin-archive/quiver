@@ -4,7 +4,7 @@ import cc from 'classcat'
 
 import Card from './Card'
 
-const ListingsGrid = ([ state, args ]) => {
+const Grid = ([ state, args ]) => {
   const { listings = [] } = state.Listings
   const result = []
   for (let i = 0; i < listings.length; i++) {
@@ -25,7 +25,7 @@ const ListingsGrid = ([ state, args ]) => {
 
 const Listings = args =>
   h('div', { class: 'listings' }, [
-    ListingsGrid(args)
+    Grid(args)
   ])
 
 export default Listings

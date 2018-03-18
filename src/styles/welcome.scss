@@ -1,19 +1,19 @@
 
-.home-agree {
+.welcome-agree {
   margin: 70px 0 0;
   color: $retro-light;
   font-size: 14px;
   line-height: 1.5rem;
   text-align: center;
   opacity: 0;
-  animation: 0.5s 2s forwards home-fade;
+  animation: 0.5s 2s forwards welcome-fade;
 
   a {
     text-decoration: underline;
   }
 }
 
-.home-button {
+.welcome-button {
   width: 256px;
   margin: 0 auto;
   padding: 14px 0;
@@ -25,7 +25,7 @@
   background: $retro;
   cursor: pointer;
   overflow: hidden;
-  animation: 1.5s home-slide;
+  animation: 1.5s welcome-slide;
 
   &::before {
     display: block;
@@ -37,7 +37,7 @@
     background: $white;
     content: '';
     opacity: 0;
-    animation: 0.5s 3s home-shine;
+    animation: 0.5s 3s welcome-shine;
   }
 
   &:hover {
@@ -47,42 +47,42 @@
   }
 }
 
-.home-quiver {
+.welcome-quiver {
   width: 36px * 6;
   height: 12px * 6;
   margin: 36px auto;
   background: url('images/quiver.svg');
   background-size: cover;
-  animation: home-slide 1.25s;
+  animation: welcome-slide 1.25s;
 }
 
-.home-logo {
+.welcome-logo {
   width: 256px;
   height: 256px;
   margin: 24px auto 0;
   border-radius: 50%;
   background: url('images/logo.svg');
   background-color: $retro;
-  animation: home-slide 1s;
+  animation: welcome-slide 1s;
 }
 
-.home {
+.welcome {
   display: flex;
   flex-flow: column;
   text-align: center;
   white-space: pre;
   user-select: none;
   -webkit-font-smoothing: antialiased; // HACK: Chrome
-  animation: home-slide 2s;
+  animation: welcome-slide 2s;
 }
 
-@keyframes home-fade {
+@keyframes welcome-fade {
   100% {
     opacity: 1;
   }
 }
 
-@keyframes home-shine {
+@keyframes welcome-shine {
   50% {
     opacity: 0.375;
   }
@@ -92,7 +92,7 @@
   }
 }
 
-@keyframes home-slide {
+@keyframes welcome-slide {
   0% {
     transform: translateY(96px);
     opacity: 0;

@@ -1,18 +1,33 @@
 
+.bar-inner {
+  flex: 3;
+  display: flex;
+  min-width: 100%;
+
+  > a {
+    width: 96px;
+    margin: 0 12px;
+    background: url('images/quiver-white.svg') no-repeat center;
+    background-size: contain;
+  }
+}
+
 .bar {
   display: flex;
   position: fixed;
   top: 0;
   width: 100%;
   height: 56px;
-  padding: 0 12px;
-  color: $white;
-  z-index: 1;
+  z-index: 10;
 
-  a {
-    display: block;
-    width: 96px;
-    background: url('images/quiver-white.svg') no-repeat center;
-    background-size: contain;
+  &::after {
+    flex: 2;
+    content: '';
+  }
+}
+
+@media (min-width: 1200px + 320px + 1px) {
+  .bar-inner {
+    min-width: 1200px;
   }
 }
