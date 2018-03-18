@@ -1,11 +1,9 @@
 
-# <img src=favicon.png height=24> Quiver
+# <img src=images/quiver.svg height=96>
 
 > Product lists, ratings, and reviews.
 
 [**View Demo**](https://quiver.netlify.com/)
-
-![favicon](favicon.png)
 
 ## Install and Setup
 
