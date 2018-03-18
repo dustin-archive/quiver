@@ -1,13 +1,19 @@
 
-.app-inner {
-  flex: 3;
-  // min-width: 100%;
-  padding: 56px 0 0;
-}
-
 .app-main {
   flex: 4;
+}
+
+.app-side {
+  flex: 1;
+  min-width: 320px;
+  background: $light-1;
+  z-index: 1;
+}
+
+.app {
   display: flex;
+  height: 100vh;
+  padding: 56px 0 0;
 
   &::before {
     flex: 1;
@@ -15,35 +21,9 @@
   }
 }
 
-.app-side {
-  flex: 1;
-  display: flex;
-  min-width: 320px;
-  background: $light-1;
-  z-index: 1;
-}
-
-.app-content {
-  flex: 1;
-  display: flex;
-}
-
-.app {
-  display: flex;
-  height: 100vh;
-
-  &::before {
-    position: fixed;
-    width: 100%;
-    height: 56px;
-    background: $retro;
-    content: '';
-  }
-}
-
 // mobile
-@media (max-width: 1200px + 320px) {
-  .app-main {
+@media (max-width: 1200px) {
+  .app {
     &::before {
       display: none;
     }
@@ -56,8 +36,8 @@
 }
 
 // desktop
-@media (min-width: 1200px + 320px + 1px) {
-  .app-inner {
-    min-width: 1200px;
+@media (min-width: 1200px + 1px) {
+  .app-main {
+    min-width: 1200px - 320px;
   }
 }
