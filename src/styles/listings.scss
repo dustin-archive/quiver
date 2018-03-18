@@ -18,8 +18,13 @@
   padding: 6px;
 }
 
-// desktop
 @media (min-width: 600px) {
+  .listings-item {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 900px) {
   .listings {
     padding: 18px;
   }
