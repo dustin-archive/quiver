@@ -6,14 +6,30 @@
   border-radius: 50%;
   background: $white;
 
-  img {
-    width: 36px;
-    height: 36px;
-    animation: 1s linear infinite spinner-rotate;
+  &::after {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: $white;
+    content: '';
+  }
+
+  &::before {
+    display: block;
+    height: 18px;
+    transform-origin: 50% 100%;
+    border-radius: 18px 18px 0 0;
+    background: $retro;
+    content: '';
+    animation: 1s linear infinite spinner;
   }
 }
 
-@keyframes spinner-rotate {
+@keyframes spinner {
   100% {
     transform: rotate(360deg);
   }
