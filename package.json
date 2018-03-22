@@ -2,7 +2,7 @@
   "name": "Quiver",
   "version": "0.0.0",
   "description": "Product lists, ratings, and reviews.",
-  "author": "",
+  "author": "Dustin Dowell <dustindowell2@gmail.com>",
   "license": "MIT",
   "main": "src/app.js",
   "repository": {
