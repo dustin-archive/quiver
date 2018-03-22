@@ -4,7 +4,8 @@ import cc from 'classcat'
 
 import Card from './Card'
 
-const Grid = ([ state, args ]) => {
+const Grid = args => {
+  const [ state ] = args
   const { listings = [] } = state.Listings
   const result = []
   for (let i = 0; i < listings.length; i++) {
@@ -17,7 +18,7 @@ const Grid = ([ state, args ]) => {
         }
       ])
     }, [
-      Card({ i, image, name })
+      Card(args, { i, image, name })
     ])
   }
   return result

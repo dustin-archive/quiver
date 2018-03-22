@@ -5,6 +5,7 @@ import { app } from 'hyperapp'
 
 import RouterInit from './main/RouterInit'
 
+import Images from './stores/Images'
 import Listings from './stores/Listings'
 import Reroute from './stores/Reroute'
 import Router from './stores/Router'
@@ -13,6 +14,7 @@ import RouterPage from './stores/RouterPage'
 import App from './views/App'
 
 const state = {
+  Images: {},
   Listings: {},
   Reroute: {},
   Router: {},
@@ -20,6 +22,7 @@ const state = {
 }
 
 const actions = {
+  Images,
   Listings,
   Reroute,
   Router,
