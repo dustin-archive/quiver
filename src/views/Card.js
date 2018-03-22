@@ -8,7 +8,7 @@ const Card = ([ state, actions ], { i, image, name }) => {
   return h('a', {
     class: 'card',
     onclick () {
-
+      console.log('click', i)
     },
     oncreate () {
       window.fetch(`images/products/${image}`)
@@ -23,7 +23,13 @@ const Card = ([ state, actions ], { i, image, name }) => {
       'background-image': savedImage ? `url(${savedImage})` : '',
       'animation-delay': (i * 0.25) + 's'
     }
-  }, !savedImage && h('div', { class: 'card-spinner' }, Spinner()))
+  }, !savedImage && h('div', {
+    class: 'card-spinner',
+    onremove (el, done) {
+      el.classList.add('-hide')
+      setTimeout(done, 1000)
+    }
+  }, Spinner()))
 }
 
 export default Card
