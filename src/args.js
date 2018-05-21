@@ -9,7 +9,9 @@ import RouterPage from './stores/RouterPage'
 import { getState, update } from './actions'
 
 const state = {
-  Images: {},
+  Images: {
+    hide: {}
+  },
   Listings: {},
   Reroute: {},
   Router: {},

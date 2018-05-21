@@ -1,34 +1,26 @@
 
 import { h } from 'hyperapp'
+import cc from 'classcat'
 
 import Spinner from './Spinner'
 
 const Card = ({ i, image, name }) => (state, actions) => {
-  const savedImage = state.Images[image]
+  const url = 'images/products/' + image
+  const saved = state.Images[url]
   return h('a', {
     class: 'card',
-    onclick () {
-      console.log('click', i)
-    },
-    oncreate () {
-      window.fetch(`images/products/${image}`)
-        .then(res => res.blob())
-        .then(blob => {
-          actions.Images.update({
-            [image]: window.URL.createObjectURL(blob)
-          })
-        })
+    oncreate: () => {
+      actions.Images.fetch({ url })
     },
     style: {
-      'background-image': savedImage ? `url(${savedImage})` : '',
+      'background-image': saved && `url(${saved.url})`,
       'animation-delay': (i * 0.25) + 's'
     }
-  }, !savedImage && h('div', {
-    class: 'card-spinner',
-    onremove (el, done) {
-      el.classList.add('-hide')
-      setTimeout(done, 1000)
-    }
+  }, !(saved && saved.hide) && h('div', {
+    class: cc([
+      'card-spinner',
+      { '-hide': saved }
+    ])
   }, Spinner))
 }
 
