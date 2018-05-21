@@ -3,11 +3,11 @@ import { h } from 'hyperapp'
 
 import Control from './Control'
 
-const Bar = args =>
+const Bar = d =>
   h('div', { class: 'bar' }, [
     h('div', { class: 'bar-main' }, [
       h('a', { class: 'bar-logo', href: '/' }),
-      Control(args)
+      Control
     ])
   ])
 

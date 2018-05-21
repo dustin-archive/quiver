@@ -1,12 +1,12 @@
 
 import { h } from 'hyperapp'
 
-const Loading = ({ data, loading }) =>
+const Loading = ({ data, loading }) => state =>
   loading
     ? h('div', null, 'loading...')
     : h('div', null, data)
 
-const Reroute = ([ state ]) => {
+const Reroute = d => state => {
   console.log(JSON.stringify(state, null, 2))
 
   return h('div', { class: 'reroute' }, [

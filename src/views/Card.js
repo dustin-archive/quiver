@@ -3,7 +3,7 @@ import { h } from 'hyperapp'
 
 import Spinner from './Spinner'
 
-const Card = ([ state, actions ], { i, image, name }) => {
+const Card = ({ i, image, name }) => (state, actions) => {
   const savedImage = state.Images[image]
   return h('a', {
     class: 'card',
@@ -29,7 +29,7 @@ const Card = ([ state, actions ], { i, image, name }) => {
       el.classList.add('-hide')
       setTimeout(done, 1000)
     }
-  }, Spinner()))
+  }, Spinner))
 }
 
 export default Card

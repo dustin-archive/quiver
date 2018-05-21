@@ -1,7 +1,7 @@
 
 import { h } from 'hyperapp'
 
-const Welcome = args =>
+const Welcome = d =>
   h('div', { class: 'welcome' }, [
     h('div', { class: 'welcome-logo' }),
     h('div', { class: 'welcome-quiver' }),

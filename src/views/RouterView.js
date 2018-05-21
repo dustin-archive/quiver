@@ -6,16 +6,13 @@ import Welcome from './Welcome'
 
 import shallowEqualArrays from '../helpers/shallowEqualArrays'
 
-const RouterView = args => {
+const RouterView = d => (state, actions) => {
   // map paths to views
   const routes = {
     '': Listings,
     '/reroute': Reroute,
     '/welcome': Welcome
   }
-
-  // destructure arguments
-  const [ state, actions ] = args
 
   // update RouterPage's paths if needed
   const oldPaths = state.RouterPage.paths
@@ -25,7 +22,7 @@ const RouterView = args => {
   }
 
   // render route
-  return (routes[state.Router.path] || NotFound)(args)
+  return routes[state.Router.path] || NotFound
 }
 
 export default RouterView

@@ -7,7 +7,7 @@ const Button = ({ label, icon }) =>
     // h('div', { class: 'control-label' }, label)
   ])
 
-const Control = args =>
+const Control = d =>
   h('div', { class: 'control' }, [
     Button({
       label: 'Filter',

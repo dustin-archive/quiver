@@ -4,11 +4,11 @@ import { h } from 'hyperapp'
 import Bar from './Bar'
 import RouterView from './RouterView'
 
-const App = args =>
+const App = d =>
   h('div', { class: 'app' }, [
     h('div', { class: 'app-main' }, [
-      RouterView(args),
-      Bar(args)
+      RouterView,
+      Bar
     ]),
     h('div', { class: 'app-side' }, [
       // h('div', null, 'cart items'),

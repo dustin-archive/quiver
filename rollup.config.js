@@ -2,11 +2,13 @@
 import replace from 'rollup-plugin-replace'
 import resolve from 'rollup-plugin-node-resolve'
 
-const { NODE_ENV } = process.env
-
 export default {
   plugins: [
-    replace({ NODE_ENV }),
+    replace({
+      ENV_DEVELOPMENT: process.env.NODE_ENV === 'development',
+      ENV_PRODUCTION: process.env.NODE_ENV === 'production',
+      STORAGE_KEY: 'quiver.netlify'
+    }),
     resolve()
   ]
 }
