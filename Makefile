@@ -2,6 +2,7 @@
 PATH := node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 
+.ONESHELL:
 .SILENT:
 
 all: prep css js minify html

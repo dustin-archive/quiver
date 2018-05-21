@@ -11,9 +11,9 @@ const App = d =>
       Bar
     ]),
     h('div', { class: 'app-side' }, [
-      // h('div', null, 'cart items'),
-      // h('div', null, 'filters'),
-      // h('div', null, 'personal lists')
+      h('div', {}, 'cart items'),
+      h('div', {}, 'filters'),
+      h('div', {}, 'personal lists')
     ])
   ])
 

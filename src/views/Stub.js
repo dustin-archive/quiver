@@ -4,9 +4,9 @@ import Spinner from './Spinner'
 
 const Stub = data =>
   h('html', { lang: 'en-US' }, [
-    h('head', null, [
+    h('head', {}, [
       h('meta', { charset: 'utf-8' }),
-      h('title', null, 'Quiver | Product lists, ratings, and reviews.'),
+      h('title', {}, 'Quiver | Product lists, ratings, and reviews.'),
       h('meta', {
         name: 'author',
         content: 'Dustin Dowell'

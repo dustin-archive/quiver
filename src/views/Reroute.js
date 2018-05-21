@@ -3,8 +3,8 @@ import { h } from 'hyperapp'
 
 const Loading = ({ data, loading }) => state =>
   loading
-    ? h('div', null, 'loading...')
-    : h('div', null, data)
+    ? h('div', {}, 'loading...')
+    : h('div', {}, data)
 
 const Reroute = d => state => {
   console.log(JSON.stringify(state, null, 2))

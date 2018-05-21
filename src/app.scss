@@ -21,15 +21,6 @@
   url('fonts/roboto-v18-latin-regular.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'Roboto Mono';
-  src:
-  local('Roboto Mono'),
-  local('Roboto-Mono-Regular'),
-  url('fonts/roboto-mono-v5-latin-regular.woff2') format('woff2'),
-  url('fonts/roboto-mono-v5-latin-regular.woff') format('woff');
-}
-
 //
 // # Variables
 // =============================================================================
@@ -41,11 +32,16 @@ $red: rgb(223, 31, 47);
 $yellow: rgb(223, 159, 31);
 $green: rgb(127, 191, 63);
 $blue: rgb(31, 159, 223);
-$retro: rgb(127, 207, 207);
 
-$retro-dark: rgb(31, 127, 127);
-$retro-light: rgb(131, 183, 183);
-$retro-light-2: rgb(231, 239, 239);
+$turquoise-1: rgb(127, 207, 207);
+$turquoise-2: rgb(131, 183, 183);
+$turquoise-3: rgb(231, 239, 239);
+
+// deprecated
+$retro: $turquoise-1;
+// $retro-dark: rgb(31, 127, 127);
+$retro-light: $turquoise-2;
+$retro-light-2: $turquoise-3;
 
 $dark-1: rgb(31, 33, 35);
 $dark-2: rgb(23, 25, 27);
@@ -70,7 +66,7 @@ $light-3: rgb(227, 229, 231);
   font: inherit;
   text-align: inherit;
   text-decoration: inherit;
-  -webkit-overflow-scrolling: touch; // 1
+  // -webkit-overflow-scrolling: touch; // 1
 }
 
 *, *::after, *::before {

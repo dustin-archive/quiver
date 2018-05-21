@@ -8,13 +8,13 @@
 
   &::before {
     display: block;
-    height: 18px;
-    transform-origin: 50% 100%;
+    height: 100%;
     border: 2px solid $retro;
-    border-radius: 18px 18px 0 0;
-    border-bottom-color: transparent;
+    border-radius: 50%;
+    border-top-color: $light-1;
+    border-left-color: $light-1;
     content: '';
-    animation: 1s linear infinite spinner;
+    animation: 0.5s linear infinite spinner;
   }
 }
 
