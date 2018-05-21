@@ -1,6 +1,8 @@
 
+import { update } from '../actions'
+
 const Listings = {
-  update: data => data
+  update
 }
 
 export default Listings

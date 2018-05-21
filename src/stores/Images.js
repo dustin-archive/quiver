@@ -1,6 +1,8 @@
 
+import { update } from '../actions'
+
 const Images = {
-  update: data => data
+  update
 }
 
 export default Images

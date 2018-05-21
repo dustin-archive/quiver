@@ -1,5 +1,5 @@
 
-const Reroute = ([ state, main ]) => {
+const Reroute = (state, main) => {
   console.log(`Woah there! Hang tight while we process this! #${state.Router.path}`)
 
   main.Reroute.update({

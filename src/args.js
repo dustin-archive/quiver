@@ -5,6 +5,9 @@ import Reroute from './stores/Reroute'
 import Router from './stores/Router'
 import RouterPage from './stores/RouterPage'
 
+// common actions
+import { getState, update } from './actions'
+
 const state = {
   Images: {},
   Listings: {},
@@ -19,8 +22,10 @@ const actions = {
   Reroute,
   Router,
   RouterPage,
-  getState: d => state => state,
-  update: data => data
+
+  // common actions
+  getState,
+  update
 }
 
 export { state, actions }

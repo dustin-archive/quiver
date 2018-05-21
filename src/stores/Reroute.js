@@ -1,6 +1,8 @@
 
+import { update } from '../actions'
+
 const Reroute = {
-  update: data => data
+  update
 }
 
 export default Reroute

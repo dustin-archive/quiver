@@ -19,7 +19,7 @@ const RouterInit = main => {
   }
 
   // call callback
-  ;(routes[state.Router.path] || NotFound)([state, main])
+  ;(routes[state.Router.path] || NotFound)(state, main)
 }
 
 export default RouterInit

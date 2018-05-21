@@ -1,6 +1,4 @@
 
-@charset 'UTF-8';
-
 //
 // # Fonts
 // =============================================================================
@@ -79,18 +77,10 @@ $light-3: rgb(227, 229, 231);
   box-sizing: inherit;
 }
 
-svg, table {
-  width: 100%;
-}
-
 body {
   font: 400 1em/1 '-apple-system', BlinkMacSystemFont, sans-serif;
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased; // 2
-}
-
-button {
-  user-select: none;
 }
 
 //
