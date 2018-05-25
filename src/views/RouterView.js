@@ -1,4 +1,5 @@
 
+import Item from './Item'
 import Listings from './Listings'
 import NotFound from './NotFound'
 import Reroute from './Reroute'
@@ -10,6 +11,7 @@ const RouterView = d => (state, actions) => {
   // map paths to views
   const routes = {
     '': Listings,
+    '/item': Item,
     '/reroute': Reroute,
     '/welcome': Welcome
   }

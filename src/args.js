@@ -15,7 +15,17 @@ const state = {
   Listings: {},
   Reroute: {},
   Router: {},
-  RouterPage: {}
+  RouterPage: {},
+  Stash: {
+    itemRect: {
+      x: 0,
+      y: 0
+    },
+    listingsRect: {
+      x: 0,
+      y: 0
+    }
+  } // temporary - remove this
 }
 
 const actions = {
@@ -24,6 +34,9 @@ const actions = {
   Reroute,
   Router,
   RouterPage,
+  Stash: { // temporary - remove this
+    update
+  },
 
   // common actions
   getState,

@@ -4,17 +4,16 @@ import cc from 'classcat'
 
 import Spinner from './Spinner'
 
-const Card = ({ i, image, name }) => (state, actions) => {
-  const url = 'images/products/' + image
+const Card = ({ delay, url }) => (state, actions) => {
   const saved = state.Images[url]
   return h('a', {
     class: 'card',
-    oncreate: () => {
-      actions.Images.fetch({ url })
+    oncreate: e => {
+      !saved && actions.Images.fetch({ url })
     },
     style: {
-      'background-image': saved && `url(${saved.url})`,
-      'animation-delay': (i * 0.25) + 's'
+      backgroundImage: saved && 'url(' + saved.url + ')',
+      animationDelay: delay + 's'
     }
   }, !(saved && saved.hide) && h('div', {
     class: cc([

@@ -1,0 +1,14 @@
+
+.item-image {
+  width: 200px;
+  height: 200px;
+  transition: transform 1s;
+  background-color: $light-1;
+
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+
+// .item {}
