@@ -1,4 +1,5 @@
 
+import Item from './Item'
 import Listings from './Listings'
 import NotFound from './NotFound'
 import Reroute from './Reroute'
@@ -14,6 +15,7 @@ const RouterInit = main => {
   // map paths to callbacks
   const routes = {
     '': Listings,
+    '/item': Item,
     '/reroute': Reroute,
     '/welcome': Welcome
   }

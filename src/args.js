@@ -16,16 +16,7 @@ const state = {
   Reroute: {},
   Router: {},
   RouterPage: {},
-  Stash: {
-    itemRect: {
-      x: 0,
-      y: 0
-    },
-    listingsRect: {
-      x: 0,
-      y: 0
-    }
-  } // temporary - remove this
+  Flip: {}
 }
 
 const actions = {
@@ -34,7 +25,7 @@ const actions = {
   Reroute,
   Router,
   RouterPage,
-  Stash: { // temporary - remove this
+  Flip: {
     update
   },
 

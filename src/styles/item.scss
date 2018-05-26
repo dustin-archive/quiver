@@ -2,13 +2,13 @@
 .item-image {
   width: 200px;
   height: 200px;
-  transition: transform 1s;
-  background-color: $light-1;
-
+  // transition: transform 1s;
   background-blend-mode: multiply;
+  background-color: $light-1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
+  z-index: 9999;
 }
 
 // .item {}
