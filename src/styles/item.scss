@@ -1,8 +1,8 @@
 
 .item-image {
-  width: 200px;
-  height: 200px;
-  // transition: transform 1s;
+  width: 512px;
+  height: 512px;
+  transform-origin: 0 0;
   background-blend-mode: multiply;
   background-color: $light-1;
   background-position: center;
@@ -11,4 +11,12 @@
   z-index: 9999;
 }
 
-// .item {}
+.item {
+  padding: 6px;
+}
+
+@media (min-width: 900px) {
+  .item {
+    padding: 18px;
+  }
+}

@@ -17,10 +17,10 @@ const Card = ({ delay, url }) => (state, actions) => {
     }
   }, !(saved && saved.hide) && h('div', {
     class: cc([
-      'card-spinner',
+      'card-overlay',
       { '-hide': saved }
     ])
-  }, Spinner))
+  }, h('div', { class: 'card-spinner' }, Spinner)))
 }
 
 export default Card

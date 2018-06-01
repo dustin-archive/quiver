@@ -7,7 +7,6 @@ import Card from './Card'
 const Listings = d => (state, actions) => {
   const { listings = [] } = state.Listings
   const result = []
-  // for (let i = 0; i < listings.length; i++) {
   for (let key in listings) {
     const item = listings[key]
     result[result.length] = h('a', {
@@ -18,7 +17,6 @@ const Listings = d => (state, actions) => {
       href: '#/item?id=' + key,
       onclick: e => {
         actions.Flip.update({
-          image: item.image,
           rect: e.target.getBoundingClientRect()
         })
       }
