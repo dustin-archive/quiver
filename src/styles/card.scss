@@ -18,9 +18,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
-  opacity: 0;
+  // opacity: 0;
   overflow: hidden;
-  animation: 1s forwards card;
+  // animation: 1s forwards card;
 
   &::before {
     display: block;
@@ -29,12 +29,12 @@
   }
 }
 
-@keyframes card {
-  0% {
-    transform: translateY(96px);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
+// @keyframes card {
+//   0% {
+//     transform: translateY(96px);
+//   }
+//
+//   100% {
+//     opacity: 1;
+//   }
+// }

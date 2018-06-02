@@ -2,6 +2,8 @@
 .listings-item {
   width: 50%;
   padding: 6px;
+  opacity: 0;
+  animation: 1s forwards listing-item;
   // filter: blur(2px);
 
   // &.-wide {
@@ -40,5 +42,15 @@
     //     padding: 0 0 50%;
     //   }
     // }
+  }
+}
+
+@keyframes listing-item {
+  0% {
+    transform: translateY(96px);
+  }
+
+  100% {
+    opacity: 1;
   }
 }

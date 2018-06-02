@@ -15,9 +15,12 @@ const Listings = d => (state, actions) => {
         actions.Flip.update({
           rect: e.target.getBoundingClientRect()
         })
+      },
+      style: {
+        animationDelay: result.length * 0.125 + 's'
       }
     }, Card({
-      delay: result.length * 0.125,
+      // delay: result.length * 0.125,
       url: 'images/products/' + data[id].image
     }))
   }
