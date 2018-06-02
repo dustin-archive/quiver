@@ -2,18 +2,9 @@
 import { h } from 'hyperapp'
 
 const Item = d => (state, actions) => {
-  // const url = 'images/products/' + state.Flip.image
-  const url = 'images/products/' + state.Router.query.id + '.jpg' // FIXME: temp fix for demo
+  const id = state.Router.query.id
+  const url = 'images/products/' + state.Listings.data[id].image
   const saved = state.Images[url]
-
-  // const listings = state.Listings.listings
-  // let url
-  // let saved
-  //
-  // if (listings) {
-  //   url = 'images/products/' + listings[state.Router.query.id].image
-  //   saved = state.Images[url]
-  // }
 
   return h('div', { class: 'item' }, [
     h('div', {
@@ -21,20 +12,22 @@ const Item = d => (state, actions) => {
       oncreate: e => {
         !saved && actions.Images.fetch({ url })
 
-        const item = state.Flip.rect
-
-        if (item) {
+        if (state.Flip.rect) {
           const rect = e.getBoundingClientRect()
 
+          const tx = state.Flip.rect.x - rect.x
+          const ty = state.Flip.rect.y - rect.y
+          const sx = state.Flip.rect.width / rect.width
+
           actions.Flip.update({
-            transform: 'translate(' + (item.x - rect.x) + 'px, ' + (item.y - rect.y) + 'px) scale(' + (item.width / rect.width) + ')',
-            transition: false
+            transform: 'translate(' + tx + 'px,' + ty + 'px) scale(' + sx + ')',
+            transition: null
           })
 
           setTimeout(() => {
             actions.Flip.update({
-              transform: 'scale(1) translate(0,0)',
-              transition: true
+              transform: 'translate(0,0) scale(1)',
+              transition: 'transform 1s'
             })
           }, 250)
         }
@@ -42,7 +35,7 @@ const Item = d => (state, actions) => {
       style: {
         backgroundImage: saved && 'url(' + saved.url + ')',
         transform: state.Flip.transform,
-        transition: state.Flip.transition && 'transform 1s'
+        transition: state.Flip.transition
       }
     })
   ])

@@ -2,7 +2,7 @@
 const Listings = (s, main) => {
   setTimeout(() => {
     main.Listings.update({
-      listings: {
+      data: {
         0: { name: '0', image: '0.jpg' },
         1: { name: '1', image: '1.jpg' },
         2: { name: '2', image: '2.jpg' },
@@ -16,7 +16,7 @@ const Listings = (s, main) => {
         10: { name: '10', image: '10.jpg' }
       }
     })
-  }, 250)
+  }, 3000)
 }
 
 export default Listings

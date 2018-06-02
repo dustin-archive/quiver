@@ -3,6 +3,7 @@ import Item from './Item'
 import Listings from './Listings'
 import NotFound from './NotFound'
 import Reroute from './Reroute'
+import Spinner from './Spinner'
 import Welcome from './Welcome'
 
 import shallowEqualArrays from '../helpers/shallowEqualArrays'
@@ -10,8 +11,8 @@ import shallowEqualArrays from '../helpers/shallowEqualArrays'
 const RouterView = d => (state, actions) => {
   // map paths to views
   const routes = {
-    '': Listings,
-    '/item': Item,
+    '': state.Listings.data ? Listings : Spinner,
+    '/item': state.Listings.data ? Item : Spinner,
     '/reroute': Reroute,
     '/welcome': Welcome
   }

@@ -5,10 +5,10 @@ import cc from 'classcat'
 import Card from './Card'
 
 const Listings = d => (state, actions) => {
-  const { listings = [] } = state.Listings
+  const data = state.Listings.data
   const result = []
-  for (let key in listings) {
-    const item = listings[key]
+  for (let key in data) {
+    const item = data[key]
     result[result.length] = h('a', {
       class: cc([
         'listings-item',

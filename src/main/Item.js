@@ -3,17 +3,15 @@ const Item = (state, main) => {
   const id = state.Router.query.id
 
   setTimeout(() => {
-    console.log(id)
-
     main.Listings.update({
-      listings: {
+      data: {
         [id]: {
           name: id,
           image: id + '.jpg'
         }
       }
     })
-  }, 250)
+  }, 3000)
 }
 
 export default Item
