@@ -6,6 +6,7 @@ import Spinner from './Spinner'
 
 const Card = ({ delay, url }) => (state, actions) => {
   const saved = state.Images[url]
+
   return h('a', {
     class: 'card',
     oncreate: e => {

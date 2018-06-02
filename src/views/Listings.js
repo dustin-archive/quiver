@@ -1,32 +1,27 @@
 
 import { h } from 'hyperapp'
-import cc from 'classcat'
 
 import Card from './Card'
 
 const Listings = d => (state, actions) => {
   const data = state.Listings.data
   const result = []
-  for (let key in data) {
-    const item = data[key]
+
+  for (let id in data) {
     result[result.length] = h('a', {
-      class: cc([
-        'listings-item',
-        { '-wide': item.wide }
-      ]),
-      href: '#/item?id=' + key,
+      class: 'listings-item',
+      href: '#/item?id=' + id,
       onclick: e => {
         actions.Flip.update({
           rect: e.target.getBoundingClientRect()
         })
       }
-    }, [
-      Card({
-        delay: result.length * 0.125,
-        url: 'images/products/' + item.image
-      })
-    ])
+    }, Card({
+      delay: result.length * 0.125,
+      url: 'images/products/' + data[id].image
+    }))
   }
+
   return h('div', { class: 'listings' }, result)
 }
 
