@@ -19,7 +19,7 @@ const Listings = (s, main) => {
         10: { name: '10', image: '10.jpg' }
       }
     })
-  }, 3000)
+  }, 2000)
 }
 
 export default Listings

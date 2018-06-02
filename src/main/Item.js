@@ -18,7 +18,7 @@ const Item = (state, main) => {
       data,
       loading: null
     })
-  }, 3000)
+  }, 2000)
 }
 
 export default Item
