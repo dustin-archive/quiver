@@ -3,6 +3,11 @@
   width: 512px;
   height: 512px;
   transform-origin: 0 0;
+
+  &.-fade {
+    opacity: 0;
+    animation: 1s forwards item;
+  }
 }
 
 .item {
@@ -12,5 +17,11 @@
 @media (min-width: 900px) {
   .item {
     padding: 18px;
+  }
+}
+
+@keyframes item {
+  100% {
+    opacity: 1;
   }
 }

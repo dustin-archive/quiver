@@ -6,7 +6,7 @@ import Spinner from './Spinner'
 
 const Image = d => (state, actions) =>
   h('div', { class: 'item' }, [
-    h('div', { class: 'item-image' }, [
+    h('div', { class: 'item-image -fade' }, [
       Card({ url: state.Listings.data[state.Router.query.id].image })
     ])
   ])
