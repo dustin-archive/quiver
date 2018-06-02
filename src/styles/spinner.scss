@@ -1,5 +1,5 @@
 
-.spinner {
+.spinner-circle {
   width: 44px;
   height: 44px;
   margin: auto; // NOTE: always center
@@ -17,6 +17,11 @@
     content: '';
     animation: 0.5s linear infinite spinner;
   }
+}
+
+.spinner {
+  display: flex;
+  height: 100%;
 }
 
 @keyframes spinner {

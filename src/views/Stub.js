@@ -1,37 +1,28 @@
 
 import { h } from 'hyperapp'
-import Spinner from './Spinner'
+
+const title = 'Quiver | Product lists, ratings, and reviews.'
+const author = 'Dustin Dowell'
+const description = 'Product lists, ratings, and reviews.'
+const keywords = ''
+const viewport = 'width=device-width, initial-scale=1, user-scalable=0'
 
 const Stub = data =>
   h('html', { lang: 'en-US' }, [
     h('head', {}, [
       h('meta', { charset: 'utf-8' }),
-      h('title', {}, 'Quiver | Product lists, ratings, and reviews.'),
-      h('meta', {
-        name: 'author',
-        content: 'Dustin Dowell'
-      }),
-      h('meta', {
-        name: 'description',
-        content: 'Product lists, ratings, and reviews.'
-      }),
-      h('meta', {
-        name: 'keywords',
-        content: ''
-      }),
-      h('meta', {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1, user-scalable=0'
-      }),
+      h('title', {}, title),
+      h('meta', { name: 'author', content: author }),
+      h('meta', { name: 'description', content: description }),
+      h('meta', { name: 'keywords', content: keywords }),
+      h('meta', { name: 'viewport', content: viewport }),
       h('link', { rel: 'icon', type: 'image/png', href: 'favicon.png' }),
       ENV_PRODUCTION
         ? h('style', { innerHTML: data.css })
         : h('link', { rel: 'stylesheet', href: 'app.css' })
     ]),
     h('body', null, [
-      h('div', { id: 'app' }, [
-        h('div', { class: 'content' }, Spinner)
-      ]),
+      h('div', { id: 'app' }),
       ENV_PRODUCTION
         ? h('script', { innerHTML: data.js })
         : h('script', { defer: true, src: 'app.js' })
