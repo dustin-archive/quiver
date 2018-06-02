@@ -19,9 +19,20 @@
   background-size: 75%;
   overflow: hidden; // NOTE: for .card-overlay's square corners
 
+  &.-fade {
+    opacity: 0;
+    animation: 1s forwards card;
+  }
+
   &::before {
     display: block;
     padding: 0 0 100%;
     content: '';
+  }
+}
+
+@keyframes card {
+  100% {
+    opacity: 1;
   }
 }
