@@ -1,17 +1,13 @@
 
 import { h } from 'hyperapp'
 
-const Item = d => (state, actions) => {
-  const id = state.Router.query.id
-  const url = 'images/products/' + state.Listings[id].image
-  const saved = state.Images[url]
+import Card from './Card'
 
-  return h('div', { class: 'item' }, [
+const Item = d => (state, actions) =>
+  h('div', { class: 'item', key: 'item' }, [
     h('div', {
       class: 'item-image',
       oncreate: e => {
-        !saved && actions.Images.fetch({ url })
-
         if (state.Flip.rect) {
           const rect = e.getBoundingClientRect()
 
@@ -33,12 +29,10 @@ const Item = d => (state, actions) => {
         }
       },
       style: {
-        backgroundImage: saved && 'url(' + saved.url + ')',
         transform: state.Flip.transform,
         transition: state.Flip.transition
       }
-    })
+    }, Card({ url: state.Listings[state.Router.query.id].image }))
   ])
-}
 
 export default Item

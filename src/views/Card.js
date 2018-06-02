@@ -4,7 +4,8 @@ import { h } from 'hyperapp'
 import Spinner from './Spinner'
 
 const Card = data => (state, actions) => {
-  const saved = state.Images[data.url]
+  const url = 'images/products/' + data.url
+  const saved = state.Images[url]
 
   return saved
     ? h('a', {
@@ -16,7 +17,7 @@ const Card = data => (state, actions) => {
     : h('a', {
       class: 'card',
       oncreate: e => {
-        actions.Images.fetch({ url: data.url })
+        actions.Images.fetch({ url })
       }
     }, h('div', { class: 'card-overlay' }, Spinner))
 }

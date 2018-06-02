@@ -9,12 +9,10 @@ import Welcome from './Welcome'
 import shallowEqualArrays from '../helpers/shallowEqualArrays'
 
 const RouterView = d => (state, actions) => {
-  const id = state.Router.query.id
-
   // map paths to views
   const routes = {
-    '': state.Listings[0] ? Listings : Spinner,
-    '/item': state.Listings[id] ? Item : Spinner,
+    '': Object.keys(state.Listings).length ? Listings : Spinner,
+    '/item': state.Listings[state.Router.query.id] ? Item : Spinner,
     '/reroute': Reroute,
     '/welcome': Welcome
   }
