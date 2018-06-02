@@ -5,14 +5,6 @@
   opacity: 0;
   animation: 1s forwards listing-item;
   // filter: blur(2px);
-
-  // &.-wide {
-  //   width: calc(100% - 12px);
-  //
-  //   &::before {
-  //     padding: 0 0 50%;
-  //   }
-  // }
 }
 
 .listings {
@@ -34,14 +26,6 @@
 
   .listings-item {
     width: 25%;
-
-    // &.-wide {
-    //   width: calc(50% - 12px);
-    //
-    //   &::before {
-    //     padding: 0 0 50%;
-    //   }
-    // }
   }
 }
 

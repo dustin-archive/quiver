@@ -3,21 +3,20 @@ import { h } from 'hyperapp'
 
 import Spinner from './Spinner'
 
-const Card = ({ delay, url }) => (state, actions) => {
-  const saved = state.Images[url]
+const Card = data => (state, actions) => {
+  const saved = state.Images[data.url]
 
   return saved
     ? h('a', {
       class: 'card',
       style: {
         backgroundImage: 'url(' + saved.url + ')'
-        // animationDelay: delay + 's'
       }
     }, saved.hide && h('div', { class: 'card-overlay -hide' }, Spinner))
     : h('a', {
       class: 'card',
       oncreate: e => {
-        actions.Images.fetch({ url })
+        actions.Images.fetch({ url: data.url })
       }
     }, h('div', { class: 'card-overlay' }, Spinner))
 }

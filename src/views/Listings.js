@@ -19,10 +19,7 @@ const Listings = d => (state, actions) => {
       style: {
         animationDelay: result.length * 0.125 + 's'
       }
-    }, Card({
-      // delay: result.length * 0.125,
-      url: 'images/products/' + data[id].image
-    }))
+    }, Card({ url: 'images/products/' + data[id].image }))
   }
 
   return h('div', { class: 'listings' }, result)

@@ -18,9 +18,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
-  // opacity: 0;
-  overflow: hidden;
-  // animation: 1s forwards card;
+  overflow: hidden; // NOTE: for .card-overlay's square corners
 
   &::before {
     display: block;
@@ -28,13 +26,3 @@
     content: '';
   }
 }
-
-// @keyframes card {
-//   0% {
-//     transform: translateY(96px);
-//   }
-//
-//   100% {
-//     opacity: 1;
-//   }
-// }
