@@ -4,10 +4,9 @@ import { h } from 'hyperapp'
 import Card from './Card'
 
 const Listings = d => (state, actions) => {
-  const data = state.Listings.data
   const result = []
 
-  for (let id in data) {
+  for (let id in state.Listings) {
     result[result.length] = h('a', {
       class: 'listings-item',
       href: '#/item?id=' + id,
@@ -19,7 +18,7 @@ const Listings = d => (state, actions) => {
       style: {
         animationDelay: result.length * 0.125 + 's'
       }
-    }, Card({ url: 'images/products/' + data[id].image }))
+    }, Card({ url: 'images/products/' + state.Listings[id].image }))
   }
 
   return h('div', { class: 'listings' }, result)

@@ -4,11 +4,9 @@ const Item = (state, main) => {
 
   setTimeout(() => {
     main.Listings.update({
-      data: {
-        [id]: {
-          name: id,
-          image: id + '.jpg'
-        }
+      [id]: {
+        name: id,
+        image: id + '.jpg'
       }
     })
   }, 3000)

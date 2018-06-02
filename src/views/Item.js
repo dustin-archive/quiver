@@ -3,7 +3,7 @@ import { h } from 'hyperapp'
 
 const Item = d => (state, actions) => {
   const id = state.Router.query.id
-  const url = 'images/products/' + state.Listings.data[id].image
+  const url = 'images/products/' + state.Listings[id].image
   const saved = state.Images[url]
 
   return h('div', { class: 'item' }, [
