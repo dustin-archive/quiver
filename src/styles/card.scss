@@ -11,13 +11,13 @@
 
 .card {
   display: flex;
-  border-radius: 8px;
+  // border-radius: 8px;
   background-blend-mode: multiply;
   background-color: $light-1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
-  overflow: hidden; // NOTE: for .card-overlay's square corners
+  // overflow: hidden; // NOTE: for .card-overlay's square corners
 
   &::before {
     display: block;
