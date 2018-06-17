@@ -19,13 +19,13 @@ const Stub = data =>
       h('link', { rel: 'icon', type: 'image/png', href: 'favicon.png' }),
       ENV_PRODUCTION
         ? h('style', { innerHTML: data.css })
-        : h('link', { rel: 'stylesheet', href: 'app.css' })
+        : h('link', { rel: 'stylesheet', href: 'app.css?ENV_DATE' })
     ]),
     h('body', null, [
       h('div', { id: 'app' }),
       ENV_PRODUCTION
         ? h('script', { innerHTML: data.js })
-        : h('script', { defer: true, src: 'app.js' })
+        : h('script', { defer: true, src: 'app.js?ENV_DATE' })
     ])
   ])
 
