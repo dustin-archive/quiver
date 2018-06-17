@@ -4,7 +4,7 @@
   "description": "Product lists, ratings, and reviews.",
   "author": "Dustin Dowell <dustindowell2@gmail.com>",
   "license": "MIT",
-  "main": "src/app.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/whaaaley/quiver.git"

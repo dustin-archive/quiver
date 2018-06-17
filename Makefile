@@ -35,4 +35,4 @@ minify:
 	cleancss dist/app.css -o dist/app.css -O2 --source-map --source-map-inline-sources
 
 html:
-	$(ENV) rollup index.js -f cjs -e fs -c | node > dist/index.html
+	$(ENV) rollup src/index.js -f cjs -e fs -c | node > dist/index.html

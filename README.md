@@ -1,14 +1,14 @@
 
-# <img src=images/quiver.svg height=96>
+# <img src=assets/quiver.svg height=96>
 
 > Product lists, ratings, and reviews.
 
 [**View Demo**](https://quiver.netlify.com/)
 
-## Install and Setup
+## Install
 
 ```
-make setup
+sh install.sh
 ```
 
 ## Scripts
@@ -26,8 +26,6 @@ make start
 ```
 
 ### Build for production
-
-Set `NODE_ENV='production'` in your `.env` file.
 
 ```
 make

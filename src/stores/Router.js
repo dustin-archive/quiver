@@ -1,5 +1,5 @@
 
-import { encode, decode } from '@whaaaley/query-string'
+import { encode, decode } from '../helpers/queryString'
 
 const Router = {
   init: d => {
