@@ -11,7 +11,8 @@ const Router = {
     }
   },
   route: data => state => {
-    window.location.hash = (data.path || state.path) + encode(data.query || state.query)
+    const path = typeof data.path === 'string' ? data.path : state.path
+    window.location.hash = data.query ? path + encode(data.query) : path
   }
 }
 
