@@ -24,7 +24,6 @@ prep:
 
 css:
 	node-sass src/app.scss -o dist --include-path node_modules --source-map true --source-map-contents
-	mv dist/app.css dist/app.css
 
 js:
 	$(ENV) rollup src/app.js -o dist/app.js -f iife -m -c
