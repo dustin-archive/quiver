@@ -17,7 +17,11 @@ const Card = data => (state, actions) => {
     : h('a', {
       class: 'card',
       oncreate: e => {
-        actions.Images.fetch({ url })
+        // actions.Images.fetch({ url })
+        console.log(state.Images.queue.indexOf(url))
+        if (state.Images.queue.indexOf(url) === -1) {
+          actions.Images.enqueue({ url })
+        }
       }
     }, h('div', { class: 'card-overlay' }, Spinner))
 }

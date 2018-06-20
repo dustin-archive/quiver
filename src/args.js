@@ -10,7 +10,10 @@ import { getState, update } from './actions'
 
 const state = {
   Images: {
-    hide: {}
+    // TODO: remove all this junk
+    hide: {},
+    queue: [],
+    index: 0
   },
   Listings: {},
   Reroute: {},
