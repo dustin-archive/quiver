@@ -1,8 +1,8 @@
 
 import { readFileSync } from 'fs'
 import { renderToString } from '@hyperapp/render/browser'
-import { state } from './src/args'
-import Stub from './src/views/Stub'
+import { state } from './args'
+import Stub from './views/Stub'
 
 const view = s => Stub({
   css: readFileSync('./dist/app.css', 'utf-8'),

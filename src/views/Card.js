@@ -4,7 +4,7 @@ import { h } from 'hyperapp'
 import Spinner from './Spinner'
 
 const Card = data => (state, actions) => {
-  const url = 'images/products/' + data.url
+  const url = 'assets/products/' + data.url
   const saved = state.Images[url]
 
   return saved
