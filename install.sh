@@ -1,7 +1,6 @@
 
 npm i \
   @whaaaley/hyperapp-object-view \
-  @whaaaley/query-string \
   classcat \
   hyperapp
 

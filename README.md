@@ -3,7 +3,7 @@
 
 > Product lists, ratings, and reviews.
 
-[**View Demo**](https://quiver.netlify.com/)
+[**View Site**](https://quiver.netlify.com/)
 
 ## Install
 
@@ -12,8 +12,6 @@ sh install.sh
 ```
 
 ## Scripts
-
-Ensure you have GNU make version 3.8.2 or above.
 
 [See `Makefile` for details.](Makefile)
 
