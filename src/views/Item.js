@@ -8,7 +8,7 @@ const Image = d => (state, actions) =>
   h('div', { class: 'item' }, [
     h('div', { class: 'item-image -fade' }, [
       Card({
-        url: state.Listings.data[state.Router.query.id].imag
+        url: state.Listings.data[state.Router.query.id].image
       })
     ])
   ])
