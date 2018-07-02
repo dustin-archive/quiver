@@ -7,7 +7,9 @@ import Spinner from './Spinner'
 const Image = d => (state, actions) =>
   h('div', { class: 'item' }, [
     h('div', { class: 'item-image -fade' }, [
-      Card({ url: state.Listings.data[state.Router.query.id].image })
+      Card({
+        url: state.Listings.data[state.Router.query.id].imag
+      })
     ])
   ])
 
@@ -38,7 +40,11 @@ const Flip = d => (state, actions) =>
         transform: state.Flip.transform,
         transition: state.Flip.transition
       }
-    }, Card({ url: state.Listings.data[state.Router.query.id].image }))
+    }, [
+      Card({
+        url: state.Listings.data[state.Router.query.id].image
+      })
+    ])
   ])
 
 const Item = d => state =>
