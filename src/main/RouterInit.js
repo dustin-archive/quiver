@@ -28,7 +28,7 @@ const RouterInit = main => {
     page_location: window.location.href,
     page_path: path + encode(state.Router.query)
   })
-  window.gtag('config', 'GA_TRACKING_ID', {
+  gtag('config', 'GA_TRACKING_ID', {
     page_title: document.title,
     page_location: window.location.href,
     page_path: path + encode(state.Router.query)
