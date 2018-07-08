@@ -1,4 +1,5 @@
 
+import { encode } from '../helpers/queryString'
 import Item from './Item'
 import Listings from './Listings'
 import NotFound from './NotFound'
@@ -23,7 +24,7 @@ const RouterInit = main => {
   // google tag manager
   window.dataLayer.push({
     event: 'pageview',
-    path: state.Router.path
+    location: state.Router.path + encode(state.Router.query)
   })
 
   // call callback
