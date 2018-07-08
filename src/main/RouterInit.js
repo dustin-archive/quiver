@@ -23,7 +23,7 @@ const RouterInit = main => {
 
   //
   const path = state.Router.path === '' ? '/' : state.Router.path
-  console.log({
+  console.log('GA_TRACKING_ID', {
     page_title: document.title,
     page_location: window.location.href,
     page_path: path + encode(state.Router.query)
