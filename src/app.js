@@ -14,12 +14,10 @@ const main = app(state, actions, view, container)
 
 // ...
 
-// google tag manager
 window.dataLayer = window.dataLayer || []
-window.dataLayer.push({
-  'gtm.start': new Date().getTime(),
-  event: 'gtm.js'
-})
+window.gtag = () => window.dataLayer.push(arguments)
+window.gtag('js', new Date())
+window.gtag('config', 'GA_TRACKING_ID')
 
 RouterInit(main)
 

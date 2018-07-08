@@ -21,10 +21,9 @@ const RouterInit = main => {
     '/welcome': Welcome
   }
 
-  // google tag manager
-  window.dataLayer.push({
-    event: 'pageview',
-    location: state.Router.path + encode(state.Router.query)
+  //
+  window.gtag('config', 'GA_TRACKING_ID', {
+    page_location: window.location.href
   })
 
   // call callback

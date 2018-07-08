@@ -5,8 +5,8 @@
 PATH := node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 
-all: ENV = env $$(cat .env-production)
-start: ENV = env $$(cat .env-development)
+all: ENV = env NODE_ENV=production
+start: ENV = env NODE_ENV=development
 
 all: prep css js minify html
 	gzip -k -n -9 dist/app.css dist/app.js
