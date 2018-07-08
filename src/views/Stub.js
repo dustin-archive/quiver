@@ -7,8 +7,6 @@ const description = 'Product lists, ratings, and reviews.'
 const keywords = ''
 const viewport = 'width=device-width, initial-scale=1, user-scalable=0'
 
-// TODO: dev-server needs to be updated to ignore file queries
-
 const Stub = data =>
   h('html', { lang: 'en-US' }, [
     h('head', {}, [
@@ -26,6 +24,10 @@ const Stub = data =>
     ]),
     h('body', null, [
       h('div', { id: 'app' }),
+      h('script', {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtm.js?id=' + 'GTM-WS2BPN3'
+      }),
       ENV_PRODUCTION
         ? h('script', { innerHTML: data.js })
         // : h('script', { defer: true, src: 'app.js?ENV_DATE' })

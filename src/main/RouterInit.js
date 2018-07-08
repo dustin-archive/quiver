@@ -20,6 +20,11 @@ const RouterInit = main => {
     '/welcome': Welcome
   }
 
+  // google tag manager
+  window.dataLayer.push({
+    event: 'pageview'
+  })
+
   // call callback
   ;(routes[state.Router.path] || NotFound)(state, main)
 }
