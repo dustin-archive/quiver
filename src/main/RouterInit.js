@@ -28,11 +28,11 @@ const RouterInit = main => {
     page_location: window.location.href,
     page_path: path + encode(state.Router.query)
   })
-  gtag('config', 'GA_TRACKING_ID', {
+  window.dataLayer.push(['config', 'GA_TRACKING_ID', {
     page_title: document.title,
     page_location: window.location.href,
     page_path: path + encode(state.Router.query)
-  })
+  }])
 
   // call callback
   ;(routes[state.Router.path] || NotFound)(state, main)
