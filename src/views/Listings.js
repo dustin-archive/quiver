@@ -20,7 +20,11 @@ const Items = d => (state, actions) => {
       style: {
         animationDelay: result.length * 0.125 + 's'
       }
-    }, Card({ url: state.Listings.data[id].image }))
+    }, [
+      Card({
+        url: state.Listings.data[id].image
+      })
+    ])
   }
 
   return h('div', { class: 'listings' }, result)

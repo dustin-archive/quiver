@@ -1,7 +1,7 @@
 
 import { h } from 'hyperapp'
 
-const title = 'Quiver | Product lists, ratings, and reviews.'
+const title = 'Quiver - Product lists, ratings, and reviews.'
 const author = 'Dustin Dowell'
 const description = 'Product lists, ratings, and reviews.'
 const keywords = ''
