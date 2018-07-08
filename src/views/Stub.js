@@ -23,9 +23,10 @@ const Stub = data =>
     ]),
     h('body', null, [
       h('div', { id: 'app' }),
+      // ENV_PRODUCTION &&
       h('script', {
         async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID'
+        src: 'assets/gtag.js'
       }),
       ENV_PRODUCTION
         ? h('script', { innerHTML: data.js })

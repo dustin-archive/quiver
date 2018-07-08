@@ -4,13 +4,14 @@ import { h } from 'hyperapp'
 import Card from './Card'
 import Spinner from './Spinner'
 
-const Image = d => (state, actions) =>
+const Gallery = d => state =>
+  Card({
+    url: state.Listings.data[state.Router.query.id].image
+  })
+
+const Image = d => state =>
   h('div', { class: 'item' }, [
-    h('div', { class: 'item-image -fade' }, [
-      Card({
-        url: state.Listings.data[state.Router.query.id].image
-      })
-    ])
+    h('div', { class: 'item-image -fade' }, Gallery)
   ])
 
 const Flip = d => (state, actions) =>
@@ -40,11 +41,7 @@ const Flip = d => (state, actions) =>
         transform: state.Flip.transform,
         transition: state.Flip.transition
       }
-    }, [
-      Card({
-        url: state.Listings.data[state.Router.query.id].image
-      })
-    ])
+    }, Gallery)
   ])
 
 const Item = d => state =>

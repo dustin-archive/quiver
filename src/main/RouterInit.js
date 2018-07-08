@@ -1,6 +1,7 @@
 
 import { encode } from '../helpers/queryString'
 import gtag from '../helpers/gtag'
+
 import Item from './Item'
 import Listings from './Listings'
 import NotFound from './NotFound'
