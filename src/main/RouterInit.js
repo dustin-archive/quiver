@@ -6,8 +6,6 @@ import NotFound from './NotFound'
 import Reroute from './Reroute'
 import Welcome from './Welcome'
 
-const gtag = () => window.dataLayer.push(arguments)
-
 const RouterInit = main => {
   // init Router
   main.Router.init()
