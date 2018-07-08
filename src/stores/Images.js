@@ -19,6 +19,12 @@ const fetch = data => (state, actions) => {
       actions.fetch({
         images: data.images
       })
+
+      setTimeout(() => {
+        actions.update({
+          [image + '.show']: true
+        })
+      }, 1000)
     })
 }
 

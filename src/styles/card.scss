@@ -2,6 +2,7 @@
 .card-overlay {
   flex: 1;
   transition: opacity 1s;
+  // transition-delay: 1s;
   background: $light-1;
 
   &.-hide {
