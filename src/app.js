@@ -15,7 +15,7 @@ const main = app(state, actions, view, container)
 // ...
 
 window.dataLayer = window.dataLayer || []
-gtag = () => window.dataLayer.push(arguments)
+const gtag = () => window.dataLayer.push(arguments)
 gtag('js', new Date())
 gtag('config', 'GA_TRACKING_ID')
 
