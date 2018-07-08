@@ -22,7 +22,8 @@ const RouterInit = main => {
 
   // google tag manager
   window.dataLayer.push({
-    event: 'pageview'
+    event: 'pageview',
+    path: state.Router.path
   })
 
   // call callback
