@@ -1,5 +1,6 @@
 
 import { encode } from '../helpers/queryString'
+import gtag from '../helpers/gtag'
 import Item from './Item'
 import Listings from './Listings'
 import NotFound from './NotFound'
@@ -21,18 +22,14 @@ const RouterInit = main => {
     '/welcome': Welcome
   }
 
-  //
   const path = state.Router.path === '' ? '/' : state.Router.path
-  console.log('GA_TRACKING_ID', {
+
+  //
+  gtag('config', 'GA_TRACKING_ID', {
     page_title: document.title,
     page_location: window.location.href,
     page_path: path + encode(state.Router.query)
   })
-  window.dataLayer.push(['config', 'GA_TRACKING_ID', {
-    page_title: document.title,
-    page_location: window.location.href,
-    page_path: path + encode(state.Router.query)
-  }])
 
   // call callback
   ;(routes[state.Router.path] || NotFound)(state, main)

@@ -3,8 +3,15 @@
 
 import { app } from 'hyperapp'
 import { state, actions } from './args'
-import RouterInit from './main/RouterInit'
+
+// ...
+
+import gtag from './helpers/gtag'
+
+// ...
+
 import App from './views/App'
+import RouterInit from './main/RouterInit'
 
 // ...
 
@@ -15,8 +22,9 @@ const main = app(state, actions, view, container)
 // ...
 
 window.dataLayer = window.dataLayer || []
-window.dataLayer.push(['js', new Date()])
-window.dataLayer.push(['config', 'GA_TRACKING_ID'])
+
+gtag('js', new Date())
+gtag('config', 'GA_TRACKING_ID')
 
 RouterInit(main)
 
