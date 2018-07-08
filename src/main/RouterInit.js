@@ -22,10 +22,16 @@ const RouterInit = main => {
   }
 
   //
+  const path = state.Router.path === '' ? '/' : state.Router.path
+  console.log({
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: path + encode(state.Router.query)
+  })
   window.gtag('config', 'GA_TRACKING_ID', {
     page_title: document.title,
     page_location: window.location.href,
-    page_path: state.Router.path + encode(state.Router.query)
+    page_path: path + encode(state.Router.query)
   })
 
   // call callback
