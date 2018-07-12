@@ -1,4 +1,13 @@
 
+.item-details {
+  // display: flex;
+  // flex-flow: column;
+
+  > * {
+    display: block;
+  }
+}
+
 .item-image {
   width: 512px;
   height: 512px;
@@ -11,12 +20,21 @@
 }
 
 .item {
+  display: flex;
   padding: 6px;
+
+  a {
+    color: $turquoise-1;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
 }
 
 @media (min-width: 900px) {
   .item {
-    padding: 18px;
+    padding: 18px + 6px;
   }
 }
 

@@ -21,10 +21,16 @@ const main = app(state, actions, view, container)
 
 // ...
 
+// Google Analytics Gtag.js
+
 window.dataLayer = window.dataLayer || []
 
 gtag('js', new Date())
 gtag('config', 'GA_TRACKING_ID')
+
+// ...
+
+// Interoperability
 
 RouterInit(main)
 

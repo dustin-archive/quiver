@@ -13,7 +13,9 @@ const fetch = data => (state, actions) => {
 
       actions.update({
         index: index + 1,
-        [image]: url
+        [image]: {
+          url
+        }
       })
 
       actions.fetch({
@@ -22,7 +24,10 @@ const fetch = data => (state, actions) => {
 
       setTimeout(() => {
         actions.update({
-          [image + '.show']: true
+          [image]: {
+            show: true,
+            url
+          }
         })
       }, 1000)
     })

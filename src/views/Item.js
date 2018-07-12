@@ -4,6 +4,19 @@ import { h } from 'hyperapp'
 import Card from './Card'
 import Spinner from './Spinner'
 
+const Details = d => state =>
+  h('div', { class: 'item' }, [
+    h('div', { class: 'item-image' }, Gallery),
+    h('div', { class: 'item-details' }, [
+      h('h1', {}, state.Listings.data[state.Router.query.id].name),
+      h('a', {
+        href: '#/' + 'store'
+      }, 'Store Name Here'),
+      h('span', {}, 'Approval Rating'),
+      h('span', {}, 'Price Goes Here')
+    ])
+  ])
+
 const Gallery = d => state =>
   Card({
     url: state.Listings.data[state.Router.query.id].image
@@ -45,10 +58,15 @@ const Flip = d => (state, actions) =>
   ])
 
 const Item = d => state =>
-  state.Flip.active
-    ? Flip
-    : state.Listings.loading
-      ? Spinner
-      : Image
+  state.Listings.loading
+    ? Spinner
+    : Details
+
+// const Item = d => state =>
+//   state.Flip.active
+//     ? Flip
+//     : state.Listings.loading
+//       ? Spinner
+//       : Image
 
 export default Item
