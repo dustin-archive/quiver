@@ -13,7 +13,8 @@ const state = {
   Reroute: {},
   Router: {},
   RouterPage: {},
-  Flip: {}
+  Flip: {},
+  Cards: {}
 }
 
 const actions = {
@@ -23,6 +24,9 @@ const actions = {
   Router,
   RouterPage,
   Flip: {
+    update
+  },
+  Cards: {
     update
   },
 

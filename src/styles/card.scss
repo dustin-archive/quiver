@@ -2,11 +2,15 @@
 .card-overlay {
   flex: 1;
   transition: opacity 1s;
-  // transition-delay: 1s;
   background: $light-1;
 
   &.-hide {
     opacity: 0;
+  }
+
+  &.-fade {
+    opacity: 1;
+    animation: 1s forwards fade;
   }
 }
 
@@ -24,5 +28,11 @@
     display: block;
     padding: 0 0 100%;
     content: '';
+  }
+}
+
+@keyframes fade {
+  100% {
+    opacity: 0;
   }
 }

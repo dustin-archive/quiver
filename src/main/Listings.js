@@ -77,6 +77,12 @@ const Listings = (s, main) => {
     main.Images.fetch({
       images: json.images
     })
+
+    setTimeout(() => {
+      main.Cards.update({
+        spin: true
+      })
+    }, 1000)
   }, 2000)
 }
 

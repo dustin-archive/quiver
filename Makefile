@@ -1,5 +1,6 @@
 
 .ONESHELL:
+.PHONY : all demo start prep css js minify html
 .SILENT:
 
 PATH := node_modules/.bin:$(PATH)
