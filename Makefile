@@ -13,10 +13,10 @@ all: prep css js minify html
 	gzip -k -n -9 dist/app.css dist/app.js
 
 demo: all
-	dev-server dist --watch "src/**/*" "make"
+	dev-server dist --watch "src/**/*" "$(MAKE)"
 
 start: prep css js html
-	dev-server dist --watch "src/**/*.scss" "make css" --watch "src/**/*.js" "make js"
+	dev-server dist --watch "src/**/*.scss" "$(MAKE) css" --watch "src/**/*.js" "$(MAKE) js"
 
 prep:
 	rm -rf dist
